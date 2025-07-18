@@ -41,6 +41,8 @@
 
 `PUSH A VALUE INTO SHADER FILE + ROCKET`
 
+> You need to write those lines above the basic code structure in the main.cpp do while function.
+
 IN C++
 
 ```c++
