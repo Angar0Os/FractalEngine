@@ -1,7 +1,7 @@
 #include <synctracker.h>
 #include <soundTrack.h>
 
-//#define SYNC_PLAYER
+//#define SYNC_PLAYER <-- Enable this for demo exe.
 
 #include <rocket/sync.h>
 
