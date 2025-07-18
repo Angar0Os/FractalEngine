@@ -149,7 +149,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\file.h" />
-    <ClInclude Include="..\include\main.h" />
     <ClInclude Include="..\include\renderer.h" />
     <ClInclude Include="..\include\soundTrack.h" />
     <ClInclude Include="..\include\syncTracker.h" />

@@ -4,7 +4,6 @@
 
 #define GLEW_STATIC
 #include <GL/glew.h>
-
 #include <GLFW/glfw3.h>
 
 #pragma comment(lib, "OpenGL32.lib")
@@ -38,7 +37,7 @@ Window::Window(const glm::ivec2& size)
 	}
 
 	glfwMakeContextCurrent(m_window);
-	//FullScreenMode(m_window);
+	//FullScreenMode(m_window); <-- Enable this for demo exe
 
 	glewExperimental = true;
 	if (glewInit() != GLEW_OK)

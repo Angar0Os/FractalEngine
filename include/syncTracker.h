@@ -19,9 +19,9 @@ public:
 	explicit SyncTracker();
 	~SyncTracker() noexcept;
 
-	void Update(SoundTrack& SoundTrack);
-	float FetchValue(const std::string& name);
-	float CurrentTime();
+	void	Update(SoundTrack& SoundTrack);
+	double	FetchValue(const std::string& name);
+	float	CurrentTime();
 
 };
 

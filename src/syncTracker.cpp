@@ -49,7 +49,7 @@ void SyncTracker::Update(SoundTrack& soundtrack)
 #endif
 }
 
-float SyncTracker::FetchValue(const std::string& name)
+double SyncTracker::FetchValue(const std::string& name)
 {
     if (!m_tracks.contains(name))
         m_tracks[name] = sync_get_track(m_rocket, name.c_str());

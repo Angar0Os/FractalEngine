@@ -3,7 +3,12 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-void textLoader::loadImage(const char* image_path, int width, int height, int nrChannels, int req_comp)
+#include <iostream>
+
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+
+void textLoader::LoadImage(const char* image_path, int width, int height, int nrChannels, int req_comp)
 {
     glGenTextures(1, &texture);
     glBindTexture(GL_TEXTURE_2D, texture);

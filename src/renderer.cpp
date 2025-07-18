@@ -40,7 +40,7 @@ Renderer::Renderer(const Window& window)
 	glVertexArrayAttribFormat(vao, 0, 2, GL_FLOAT, false, 0);
 	glVertexArrayElementBuffer(vao, EBO);
 
-	ReadAndWrite_Shader("assets/shaders/shader.vs", "assets/shaders/shader.fs");
+	ReadAndWriteShader("assets/shaders/shader.vs", "assets/shaders/shader.fs");
 	m_shader = CreateShader(m_vertexShader, m_fragmentShader);
 	glUseProgram(m_shader);
 
@@ -112,7 +112,7 @@ unsigned int Renderer::CompileShader(unsigned int type, const std::string& sourc
 	return id;
 }
 
-void Renderer::ReadAndWrite_Shader(const char* vertexPath, const char* fragmentPath)
+void Renderer::ReadAndWriteShader(const char* vertexPath, const char* fragmentPath)
 {
 	std::string vertexCode;
 	std::string fragmentCode;

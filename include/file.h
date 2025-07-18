@@ -2,16 +2,11 @@
 #define FRACTALENGINE_FILE_H
 
 #include <filesystem>
-#include <chrono>
-#include <thread>
-#include <unordered_map>
-#include <string>
-#include <functional>
 
-#include <window.h>
-#include <renderer.h>
+enum class FileStatus { MODIFIED, NOTHING_CHANGED };
 
-enum class FileStatus { modified, nothingchanged };
+class Renderer;
+class Window;
 
 class File
 {
@@ -20,8 +15,6 @@ public:
     ~File() noexcept;
 
     void UpdateFile(Renderer& render, Window& window, float t);
-
-
     void CheckModification();
 
     FileStatus status;
@@ -33,5 +26,5 @@ public:
     const char* vertex_shader_file = "assets/shaders/shader.vs";
 };
 
-#endif // REVISION2022_FILE_H
+#endif // FRACTALENGINE_FILE_H
 

@@ -7,9 +7,6 @@
 #include <file.h>
 #include <textloader.h>
 
-#define GLEW_STATIC
-#include <GL/glew.h>
-
 #include <glm/gtc/matrix_transform.hpp>
 
 int main(int argc, char** argv)
@@ -20,23 +17,15 @@ int main(int argc, char** argv)
 	SyncTracker syncTracker;
 	Renderer renderer(window);
 
-	s.PlayMusic("assets/sound/exe_music.mp3");
+	//s.PlayMusic("assets/sound/your_music_name");
 
-	glm::vec3	color = glm::vec3(1.0f, 0.0f, 0.0f);
-	
 	do
 	{
-		color.x = syncTracker.FetchValue("color:X");
-		color.y = syncTracker.FetchValue("color:Y");
-		color.z = syncTracker.FetchValue("color:Z");
-
-		glProgramUniform3f(renderer.m_shader, 3, color.x, color.y, color.z);
-
 		syncTracker.Update(s);
 		renderer.Render();
 		file.UpdateFile(renderer, window, float(s.CurrentTime()));
         
-	} while (window.SwapBuffers()/* && (SoundTrack::ms_IsPlaying(&s))*/);
+	} while (window.SwapBuffers()/* && (SoundTrack::ms_IsPlaying(&s)) <-- Enable this for demo exe.*/);
 
 	return 0;
 }

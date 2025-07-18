@@ -1,9 +1,6 @@
 #ifndef FRACTALENGINE_WINDOW_H
 #define FRACTALENGINE_WINDOW_H
 
-#include <cstdint>
-#include <string>
-
 #include <glm/glm.hpp>
 
 struct GLFWwindow;
