@@ -36,7 +36,7 @@
 `LOAD A MUSIC`
 
 ```c++
-    s.PlayMusic("your_music_path");
+    	s.PlayMusic("your_music_path");
 ```
 
 `PUSH A VALUE INTO SHADER FILE + ROCKET`
@@ -44,13 +44,13 @@
 IN C++
 
 ```c++
-	glm::vec3	color = glm::vec3(1.0f, 0.0f, 0.0f);
+	glm::vec3 color = glm::vec3(1.0f, 0.0f, 0.0f);
     
-    color.x = syncTracker.FetchValue("color:X");
+	color.x = syncTracker.FetchValue("color:X");
 	color.y = syncTracker.FetchValue("color:Y");
 	color.z = syncTracker.FetchValue("color:Z");
 
-    glProgramUniform3f(renderer.m_shader, 3, color.x, color.y, color.z);
+	glProgramUniform3f(renderer.m_shader, 3, color.x, color.y, color.z);
 ```
 
 IN SHADER
@@ -61,11 +61,11 @@ layout(location = 3) uniform vec3 uColor;
 
 void main()
 {
-    FragColor = vec4(uColor, 1.0);
+	FragColor = vec4(uColor, 1.0);
 }
 
 ```
 
 WHAT IT LOOKS LIKE
 
-[](screenshots/gnu-rocket-preview.png)"# FractalEngine" 
+![Rocket Preview](screenshots/gnu-rocket-preview.png) 
