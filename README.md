@@ -68,4 +68,4 @@ void main()
 
 WHAT IT LOOKS LIKE
 
-[Rocket Preview](screenshots/gnu-rocket-preview.png) 
+![Rocket Preview](screenshots/gnu-rocket-preview.png) 
