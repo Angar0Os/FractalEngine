@@ -11,7 +11,7 @@
  	s.PlayMusic("your_music_path");
  ``` 
 
- 3. Open [GNU ROCKET](!https://github.com/emoon/rocket) editor
+ 3. Open ![GNU ROCKET](!https://github.com/emoon/rocket) editor
  4. You can now run the projet
 
 ## Main Functions
